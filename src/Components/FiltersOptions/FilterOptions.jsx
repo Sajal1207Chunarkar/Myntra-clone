@@ -17,7 +17,8 @@ function FilterOptions() {
             { filterName: 'M & H', filteredProducts: 10000 },
             { filterName: 'ShowOff', filteredProducts: 100 },
             { filterName: 'Luis Phillipe', filteredProducts: 1 },
-        ]
+        ],
+        more:'139+'
     },
     {
         filterBy: 'PRICES',
@@ -45,10 +46,10 @@ function FilterOptions() {
           { filterName: 'Blue', filteredProducts: 5 },
           { filterName: 'Yellow', filteredProducts: 6 },
           { filterName: 'Black', filteredProducts: 7 },
+          { filterName: 'White', filteredProducts: 8},
 
-
-
-        ]
+        ],
+        more:'39+'
     },
     {
         filterBy: 'Discount Range',
@@ -87,15 +88,21 @@ function FilterOptions() {
           <div key={i} className="flex flex-row items-center mb-2">
             <input name={oneFilter.filterBy} type={oneFilter.inputType} className="mr-3" />
             {oneFilter.color && 
-            <div style={{backgroundColor:oneBrand.filterName}}
-            className="w-4 h-4 rounded-full mr-2">
+            <div style={{backgroundColor:oneBrand.filterName, 
+              border:oneBrand.filterName ==='White' ? '1px solid lightgray':'none'}}
+            className="w-4 h-4 rounded-full mr-2 border  border-slate-400">
               </div>
 }
             <p className="text-xs font font-semibold mr-1 ">{oneBrand.filterName}</p>
-            <p className="text-xs text-slate-500">({oneBrand.filteredProducts})</p>
+            <p className="text-[10px] text-slate-500">({oneBrand.filteredProducts})</p>
           </div>
           ))
         }
+        {
+          oneFilter.more && 
+        
+        <h1 className="text-xs font-semibold text-pink-400 ml-7 mt-2">{oneFilter.more} more</h1>
+}
         </div>
       </div>
           
@@ -125,9 +132,9 @@ function FilterOptions() {
       {/* color */}
       <div></div>
       {/* discount range */}
-      <div>
+      {/* <div>
 
-      </div>
+      </div> */}
     </div>
   );
 }
