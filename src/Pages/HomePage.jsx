@@ -12,7 +12,7 @@ function HomePage() {
       {/* breadcrumbs */}
       <BreadCrumbs />
 
-      <div className="flex-flex-row w-[1350px] m-auto">
+      <div className="flex flex-row w-[1350px] m-auto">
         {/* filteroptions */}
         <FilterOptions />
 
