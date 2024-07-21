@@ -3,13 +3,16 @@ import { AiOutlineUser } from "react-icons/ai";
 import { CiHeart } from "react-icons/ci";
 import { CiSearch } from "react-icons/ci";
 import { BsBagFill } from "react-icons/bs"
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
-    <div className="w-screen flex flex-row items-center justify-between shadow-md px-10">
+    <div className="w-screen flex flex-row items-center xl:justify-between shadow-md px-10">
       {/* left */}
       <div className="flex flex-row items-center">
+        <Link to={'/home'}>
         <img src="Images/Myntra-icon-logo.png" alt="" className="w-12" />
+        </Link>
         <div className="flex flex-row items-center w-[680px] ml-5"> 
           <p className="text-xs font-bold text-slate-700 p-6 py-8 border-b-4 border-white  hover:cursor-pointer hover:border-b-red-700 transiton duration-100  ">MEN</p>
           <p className="text-xs font-bold text-slate-700 p-6 py-8 border-b-4 border-white  hover:cursor-pointer hover:border-b-yellow-700 transiton duration-100   ">WOMEN</p>
@@ -35,10 +38,12 @@ function Header() {
             <CiHeart />
             <p>WISHLIST</p>
           </div>
+          <Link to={'/cart'}>
           <div className="flex flex-col items-center pl-10 text-sm">
             <BsBagFill/>
             BAG
           </div>
+          </Link>
         </div>
       </div>
     </div>
